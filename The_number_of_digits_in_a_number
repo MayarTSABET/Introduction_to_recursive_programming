@@ -1,0 +1,17 @@
+#include<stdio.h>
+int count( int );
+int main()
+{
+	int number;
+	printf( "Enter a natural number: ");
+	scanf( "%d", &number);
+	printf( "%d",count( number));
+	return 0;
+}
+int count( int n)
+{
+	if( n < 10)
+	return 1;
+	else
+	return 1 + count( n / 10);
+}
