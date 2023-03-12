@@ -1,0 +1,20 @@
+# -The_reverse_of_a_number
+A recursive function that returns the reverse of a given natural number N
+#include<stdio.h>
+#include<math.h>
+int reverse( int );
+int main()
+{
+	int number;
+	printf( "Enter a natural number: ");
+	scanf( "%d", &number);
+	printf( "%d", reverse( number));
+	return 0;
+}
+int reverse( int n)
+{
+	if( n < 10) 
+	return n;
+	else
+	return ( n%10) *pow( 10, (int)log10( n)) + reverse( n / 10);
+}
