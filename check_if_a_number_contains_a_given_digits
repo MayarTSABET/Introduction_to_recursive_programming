@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<stdbool.h>
+bool contain( int n, int d);
+int main()
+{
+	int number, digit;
+	printf( "Enter a values for number and digit: ");
+	scanf( "%d%d", &number, &digit);
+	printf( "%d", contain( number, digit));
+	return 0;
+}
+bool contain( int n, int d)
+{
+	if( n < 10 )
+	return n == d;
+	else
+	return (n % 10 == d)||contain( n / 10, d);
+}
